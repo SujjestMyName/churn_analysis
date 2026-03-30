@@ -1,0 +1,13 @@
+--creating views
+-- Created by GitHub Copilot in SSMS - review carefully before executing
+DROP VIEW IF EXISTS dbo.vw_ChurnData;
+GO
+CREATE VIEW dbo.vw_ChurnData AS
+    SELECT * FROM dbo.prod_Churn WHERE Customer_Status IN ('Churned', 'Stayed');
+GO
+
+DROP VIEW IF EXISTS dbo.vw_JoinData;
+GO
+CREATE VIEW dbo.vw_JoinData AS
+    SELECT * FROM dbo.prod_Churn WHERE Customer_Status = 'Joined';
+GO
