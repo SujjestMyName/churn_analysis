@@ -11,3 +11,4 @@ GO
 CREATE VIEW dbo.vw_JoinData AS
     SELECT * FROM dbo.prod_Churn WHERE Customer_Status = 'Joined';
 GO
+lets go!!
